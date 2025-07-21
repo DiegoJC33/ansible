@@ -1,0 +1,5 @@
+---
+# handlers file for nginx_web
+
+- name: Forçar o início do Nginx
+  ansible.builtin.command: service nginx start

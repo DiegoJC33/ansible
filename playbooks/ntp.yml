@@ -1,0 +1,6 @@
+- name: Configurar NTP e hardening básico
+  hosts: servers
+  become: yes
+  roles:
+    - ntp_hardening
+

@@ -1,0 +1,6 @@
+- name: Instalar e configurar Nginx
+  hosts: servers
+  become: yes
+  roles:
+    - nginx_web
+

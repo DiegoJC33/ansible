@@ -1,0 +1,9 @@
+---
+# tasks file for ntp_hardening
+
+- name: Instalar o pacote NTP
+  ansible.builtin.apt:
+    name: ntp
+    state: latest
+  notify:
+    - Reiniciar NTP

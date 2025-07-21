@@ -1,0 +1,13 @@
+---
+# tasks file for nginx_web
+
+# TAREFA 1: Instalar o pacote. ESSA TEM QUE VIR PRIMEIRO.
+- name: Instala o Nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: latest
+  notify: Forçar o início do Nginx # O nome aqui deve ser igual ao do handler
+
+# TAREFA 2: Habilitar o serviço. SÓ PODE RODAR DEPOIS DA 1.
+- name: Garante que o Nginx está habilitado para iniciar com o sistema
+  ansible.builtin.command: update-rc.d nginx defaults
